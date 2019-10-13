@@ -8,6 +8,11 @@ class GameController extends Component{
              matrix
          };
     };
+
+    UpdateMatrix = (clicked, empty) => { // some values not in right spot, could be initialization
+        [this.state.matrix[clicked], this.state.matrix[empty]] = [this.state.matrix[empty], this.state.matrix[clicked]];
+        console.log(this.state.matrix);
+    }
 }
 
 export default GameController;
