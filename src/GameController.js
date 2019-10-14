@@ -4,7 +4,8 @@ export default class GameController {
 
     constructor(props){
         this.state = {
-            matrix: this.setMatrix(props)
+            matrix: this.setMatrix(props),
+            status: false
         }
     }
 
@@ -31,6 +32,7 @@ export default class GameController {
                 status =  false;
             }
         });
+        this.state.status = status;
         return status;
     }
 
@@ -44,5 +46,9 @@ export default class GameController {
         }
 
         return adjacents.includes(clicked);
+    }
+
+    GameIsRunning = () =>{
+        return this.state.status;
     }
 }

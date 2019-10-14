@@ -4,12 +4,15 @@ import Grid from './Grid';
 import Header from './Header';
 import Footer from './Footer';
 import WinModal from "./WinModal";
+import NavBar from './NavBar';
 import GameController from '../GameController.js'
 const $ = require('jquery');
 
 function App() {
 
   const [squares, setSquares] = useState(shuffle(InitializeGame()));
+  const [moves, setMoves] = useState(0);
+  const [time, setTimer] = useState(0);
 
   const gameController = new GameController(squares);
   gameController.setMatrix(squares);
@@ -17,8 +20,9 @@ function App() {
   return (
     <div className="App">
       <WinModal PlayAgain={()=>ResetGame(setSquares)} />
-      <Header />
-      <Grid id={'grid'} squares={squares} setSquares={setSquares} game={gameController} />
+      <NavBar moves={moves} time={time} setTimer={setTimer}/>
+      <Header moves={moves} time={time} setTimer={setTimer}/>
+      <Grid id={'grid'} squares={squares} setSquares={setSquares} game={gameController} setMoves={setMoves}/>
       <Footer />
     </div>
   );

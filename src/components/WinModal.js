@@ -3,7 +3,6 @@ import '../styles/index.css';
 
 //TODO: add move count and completion time to modal
 function WinModal(props) {
-
     return(
         <div id={"modal"}>
             <div id={"modal-container"}>
