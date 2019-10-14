@@ -1,14 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/App.css';
 import Grid from './Grid';
 import Header from './Header';
 import Footer from './Footer';
+import WinModal from "./WinModal";
+import GameController from '../GameController.js'
+const $ = require('jquery');
 
 function App() {
 
-  let squares = [];
+  const [squares, setSquares] = useState(shuffle(InitializeGame()));
 
+  const gameController = new GameController(squares);
+  gameController.setMatrix(squares);
+
+  return (
+    <div className="App">
+      <WinModal PlayAgain={()=>ResetGame(setSquares)} />
+      <Header />
+      <Grid id={'grid'} squares={squares} setSquares={setSquares} game={gameController} />
+      <Footer />
+    </div>
+  );
+}
+
+function InitializeGame(){
   let yPos = 0;
+
+  let squares = [];
 
   for(let i = 0; i < 16; i++){
 
@@ -24,15 +43,7 @@ function App() {
     }
   }
 
-  squares = shuffle(squares);
-
-  return (
-    <div className="App">
-      <Header />
-      <Grid id={'grid'} squares={squares} />
-      <Footer />
-    </div>
-  );
+  return squares;
 }
 
 function shuffle(squares){
@@ -47,6 +58,16 @@ function shuffle(squares){
     squares[rand].id = tempId;
   }
   return squares;
+}
+
+function ResetGame(setSquares){
+  $('#modal').css('display', 'none');
+
+  const squares = (shuffle(InitializeGame()));
+  const gameController = new GameController(squares);
+
+  gameController.setMatrix(squares);
+  setSquares(squares);
 }
 
 export default App;

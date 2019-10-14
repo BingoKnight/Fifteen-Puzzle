@@ -3,13 +3,28 @@ import '../styles/index.css';
 
 function Header() {
   return(
-    <div className="container">
-      <h2>Fifteen Puzzle</h2>
-      <div id="instructions">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div>
+          <NavBar/>
+            <div id="container">
+              <h2>Fifteen Puzzle</h2>
+              <div id="instructions">
+                The goal of this game is to get the numbers positioned in order but you can only move pieces
+                  into the empty space. You win the game when all pieces are in order and the empty space is at
+                  the end. As you progress through the game pieces will turn blue if they are in the right spot
+                  or become orange if they are not.
+                </div>
+            </div>
       </div>
-    </div>
   );
+}
+
+// TODO: Build navbar with new game button, move count, and timer
+function NavBar(){
+    return(
+        <nav className="navbar navbar-expand-xl align-content-end" id={"navbar"}>
+            <button className="btn btn-primary">New Game</button>
+        </nav>
+    );
 }
 
 export default Header

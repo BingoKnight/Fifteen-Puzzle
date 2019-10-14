@@ -14,7 +14,7 @@ function Square(props){
 
   if(props.square.id !== -1)
     return(
-      <Tile id={"tile"} onClick={() => props.onSquareClick(props.square)}>
+      <Tile id={"tile"} className={(props.square.id !== props.squarelist.indexOf(props.square) + 1) ? 'incorrect' : 'correct'} onClick={() => props.onSquareClick(props.square)}>
         <span>{props.square.id}</span>
       </Tile>
     );
