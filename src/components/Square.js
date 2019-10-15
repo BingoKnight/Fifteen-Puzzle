@@ -8,9 +8,9 @@ function Square(props) {
     let yDist = 100 * props.square.yPos;
 
     const Tile = styled.div`
-    left: ${xDist}px;
-    top: ${yDist}px;
-  `;
+        left: ${xDist}px;
+        top: ${yDist}px;
+    `;
 
     if (props.square.id !== -1)
         return (

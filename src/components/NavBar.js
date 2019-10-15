@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/index.css';
-import { setBoardStatus } from './Grid';
+import {setBoardStatus} from './Grid';
+
 const $ = require('jquery');
 
 // TODO: send move count and timer to win on win

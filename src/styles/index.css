@@ -1,124 +1,119 @@
 body {
-  background-color: #000000;
-  background-image: url("../resources/carbon_fiber_background-wallpaper-2560x1440.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    background-color: #000000;
+    background-image: url("../resources/carbon_fiber_background-wallpaper-2560x1440.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-#root{
-  color: #e7e7e7;
+#root {
+    color: #e7e7e7;
 }
 
-#navbar{
-  margin-bottom: 30px;
-  background-color: #434343
+#navbar {
+    margin-bottom: 30px;
+    background-color: #434343
 }
 
-#counters span{
-  padding: 0px 60px 0px 10px;
+#counters span {
+    padding: 0px 60px 0px 10px;
 }
 
-#action-buttons button{
-  margin: 5px 10px;
+#action-buttons button {
+    margin: 5px 10px;
 }
 
 #container {
-  font-size: 1.15rem;
-  width: 55%;
-  margin: auto;
+    font-size: 1.15rem;
+    width: 55%;
+    margin: auto;
 }
 
 #grid {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 500px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
 }
 
 #squares-grid {
-  width: 380px;
-  height: 380px;
-  position: relative;
-  text-align: center;
-  margin-top: 60px;
+    width: 380px;
+    height: 380px;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
 }
 
 #tile {
-  border-radius: 10px;
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all .5s;
-  /*transition-property: top, left, background-color;*/
-  /*transition-duration: .300s;*/
-  /*transition-timing-function: ease-in;*/
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 #tile.incorrect {
-  background: rgb(101,55,0);
-  background: linear-gradient(45deg, rgba(101,55,0,1) -50%, rgba(255,139,0,1) 100%);
+    background: rgb(101, 55, 0);
+    background: linear-gradient(45deg, rgba(101, 55, 0, 1) -50%, rgba(255, 139, 0, 1) 100%);
 }
 
 #tile.correct {
-  background: rgba(50, 63, 255, 1);
-  background: linear-gradient(45deg, rgba(27, 27, 127, 1) -50%, rgba(50, 63, 255, 1) 100%);
+    background: rgba(50, 63, 255, 1);
+    background: linear-gradient(45deg, rgba(27, 27, 127, 1) -50%, rgba(50, 63, 255, 1) 100%);
 }
 
 #tile span {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
-#modal{
-  /*visibility: hidden;*/
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+#modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-#modal #modal-container{
-  width: 315px;
-  margin: 30vh auto;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  background-color: #131313;
-  border-radius: 10px;
+#modal #modal-container {
+    width: 315px;
+    margin: 30vh auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: #131313;
+    border-radius: 10px;
 }
 
-#modal-container button{
-  margin-top: 15px;
+#modal-container button {
+    margin-top: 15px;
 }
 
-#modal-container #modal-header{
-  margin-bottom: 15px;
+#modal-container #modal-header {
+    margin-bottom: 15px;
 }
 
-#modal-header{
-  font-size: 2rem;
+#modal-header {
+    font-size: 2rem;
 }
