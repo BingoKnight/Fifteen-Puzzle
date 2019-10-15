@@ -22,7 +22,7 @@ function Grid(props) {
     let emptyIndex = props.squares.findIndex(square => square.id === -1);
 
     // for easy win condition, comment out adjacency validation below
-    // if(!props.game.isAdjacent(clickedIndex, emptyIndex) || !boardStatus) return;
+    if(!props.game.isAdjacent(clickedIndex, emptyIndex) || !boardStatus) return;
 
     let tempArr = Array.from(props.squares).map(square => ({...square}));
     [tempArr[clickedIndex].id, tempArr[emptyIndex].id] = [tempArr[emptyIndex].id, tempArr[clickedIndex].id];
