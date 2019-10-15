@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/App.css';
-import Grid from './Grid';
+import Grid, { setBoardStatus } from './Grid';
 import Header from './Header';
 import Footer from './Footer';
 import WinModal from "./WinModal";
@@ -80,6 +80,8 @@ function App() {
         $('#game-btn').removeClass('running');
         $('#game-btn').addClass('idle');
         $('#game-btn').text('Start Game');
+
+        setBoardStatus(false);
     }
 
     function ToggleMode() {
@@ -98,7 +100,7 @@ function App() {
 
     return (
         <div className="App">
-            <WinModal time={seconds} moves={moves} PlayAgain={() => ResetGame(null)}/>
+            <WinModal time={seconds} moves={moves} PlayAgain={() => ResetGame()}/>
             <NavBar seconds={seconds} setSeconds={setSeconds} moves={moves} setMoves={setMoves} isActive={isActive}
                     setIsActive={setIsActive} GenerateGame={ResetGame} ToggleMode={ToggleMode}/>
             <Header moves={moves}/>
