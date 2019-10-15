@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/index.css';
 
-//TODO: add move count and completion time to modal
 function WinModal(props) {
     return(
         <div id={"modal"}>
@@ -10,7 +9,11 @@ function WinModal(props) {
                     Congrats, You Win!
                 </div>
                 <div id={"modal-content"}>
-                    <button className="btn btn-primary" onClick={props.PlayAgain}>Play Again</button>
+                  You did it in {props.moves} moves!<br />
+                  It took you {props.time} seconds!
+                </div>
+                <div id={"model-footer"}>
+                  <button className="btn btn-primary" onClick={props.PlayAgain}>Play Again</button>
                 </div>
             </div>
         </div>

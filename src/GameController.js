@@ -9,11 +9,12 @@ export default class GameController {
         }
     }
 
-    UpdateMatrix = (clicked, empty) => { // some values not in right spot, could be initialization
+    UpdateMatrix = (clicked, empty, setIsActive) => { // some values not in right spot, could be initialization
         [this.state.matrix[clicked], this.state.matrix[empty]] = [this.state.matrix[empty], this.state.matrix[clicked]];
 
         if(this.isGameWon()){
             $('#modal').css('display', 'block');
+            setIsActive(false);
         }
     }
 

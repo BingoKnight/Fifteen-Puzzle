@@ -104,14 +104,18 @@ code {
 
 #modal #modal-container{
   width: 315px;
-  height: 150px;
   margin: 30vh auto;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 20px;
   background-color: #131313;
   border-radius: 10px;
 }
 
-#modal-container *{
+#modal-container button{
+  margin-top: 15px;
+}
+
+#modal-container #modal-header{
   margin-bottom: 15px;
 }
 
